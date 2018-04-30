@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { IContact } from './../contact';
 import { ContactService } from './../contacts.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   templateUrl: './contact-detail.component.html',
