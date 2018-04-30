@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IContact } from '../contact';
 import { ContactService } from '../contacts.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   templateUrl: './contact-list.component.html',
@@ -30,18 +31,10 @@ export class ContactListComponent implements OnInit {
 
   constructor(private _contactService: ContactService) { }
 
+  /**
+   * load the contact list during init operation
+   */
   ngOnInit() {
-    // this._contactService.getContacts()
-    // .subscribe(contacts => {
-    //     this.contacts = contacts;
-    //     this.filteredContacts = this.contacts;
-    // },
-    //     error => this.errorMessage = <any>error);
     this.contacts = this._contactService.getContacts();
   }
-
-  // saveNewContact(newContact: IContact): void {
-  //   this.contacts.push(newContact);
-  // }
-
 }
