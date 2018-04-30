@@ -1,16 +1,16 @@
 # PhonebookApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.\n
-@angular/cli: 1.7.4\n
-@angular-devkit/build-optimizer: 0.3.2\n
-@angular-devkit/core: 0.3.2\n
-@angular-devkit/schematics: 0.3.2\n
-@ngtools/json-schema: 1.2.0\n
-@ngtools/webpack: 1.10.2\n
-@schematics/angular: 0.3.2\n
-@schematics/package-update: 0.3.2\n
-typescript: 2.5.3\n
-webpack: 3.11.0\n
+@angular/cli: 1.7.4
+@angular-devkit/build-optimizer: 0.3.2
+@angular-devkit/core: 0.3.2
+@angular-devkit/schematics: 0.3.2
+@ngtools/json-schema: 1.2.0
+@ngtools/webpack: 1.10.2
+@schematics/angular: 0.3.2
+@schematics/package-update: 0.3.2
+typescript: 2.5.3
+webpack: 3.11.0
 
 ## Development server
 
