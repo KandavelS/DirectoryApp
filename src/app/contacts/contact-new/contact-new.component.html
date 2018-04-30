@@ -1,0 +1,61 @@
+<!-- <form #contactForm="ngForm" (ngSubmit)="saveContact(contact)">
+<div class="panel panel-primary">
+
+  <div class="panel-heading">
+        <h3 class="panel-title">Create Contact</h3> 
+    </div>
+
+    <div class="panel-body">
+      <div class="form-group" [class.has-error]="name.invalid && name.touched">
+        <label for="name" class="control-label">Name</label>
+        <input id="name" required name="name" [(ngModel)]="contact.name" type="text" 
+        class="form-control" #name="ngModel"/>
+        <span class="help-block" *ngIf="name.invalid && name.touched">
+          Name is required
+        </span>
+      </div>
+      <div class="form-group" [class.has-error]="phone.invalid && phone.touched">
+          <label for="phone" class="control-label">Phone</label>
+          <input id="phone" required name="phone" [(ngModel)]="contact.phone" type="text" 
+          class="form-control" #phone="ngModel" pattern="/^[(]{0,1}[0-9]{3}[)\.\- ]{0,1}[0-9]{3}[\.\- ]{0,1}[0-9]{4}$/">
+          <span class="help-block" *ngIf="phone.errors?.required && phone.touched">
+              Phone is required
+            </span>
+            <span class="help-block" *ngIf="phone.errors?.phone && phone.touched">
+                Phone is invalid
+              </span>        </div>
+        <div class="form-group" [class.has-error]="email.invalid && email.touched">
+          <label for="email">Email</label>
+          <input id="email" required [email]="contact.email !==''" name="email" [(ngModel)]="contact.email" type="email" 
+          class="form-control" #email="ngModel">
+          <span class="help-block" *ngIf="email.errors?.required && email.touched">
+              Email is required
+            </span>
+          <span class="help-block" *ngIf="email.errors?.email && email.touched">
+              Email is invalid
+            </span>
+        </div>
+        <div class="form-group" [class.has-error]="birthday.invalid && birthday.touched">
+          <label for="dob">DOB</label>
+          <input id="dob" required name="birthday" [(ngModel)]="contact.birthday" type="date" 
+          class="form-control" #birthday="ngModel">
+          <span class="help-block" *ngIf="birthday.invalid && birthday.touched">
+              Birthday is required
+            </span>        
+        </div>
+        <div class="form-group">
+          <label for="avatar">Avatar</label>
+          <input id="avatar" name="avatar" [(ngModel)]="contact.avatar" type="url" 
+          class="form-control" #avatar="ngModel">
+        </div>                                    
+    </div>
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Save</button>
+    </div>
+</div>
+</form>    -->
+
+<pbk-contact [contact]="contact" (ngSubmit)="saveContact(contact)"></pbk-contact>
+
+      
+

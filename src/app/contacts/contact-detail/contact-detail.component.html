@@ -1,0 +1,43 @@
+
+<div class="card text-center">
+        <div class="card-header">
+            {{contact.name}}
+        </div>
+        <div class="card-body">
+            <div class="col col-xs-10">
+                <div class="row vertical-align">
+        
+                    <div class="col-md-4">
+                            <img class="center-block img-responsive imageSize" 
+                                    [src]="contact.avatar"
+                                    [title]="contact.name">
+                    </div>
+                    <div class="col-md-1">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-md-3">Name:</div>
+                            <div class="col-md-6">{{contact.name}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">Phone:</div>
+                            <div class="col-md-6">{{ contact.phone }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">Email:</div>
+                            <div class="col-md-6">{{ contact.email }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">DOB:</div>
+                            <div class="col-md-6">{{contact.birthday}}</div>
+                        </div>
+                    </div>
+                </div>         
+        </div>
+        <div class="card-footer">
+                <a class="btn btn-secondary" (click)="onBack()" style="width:80px">
+                        Back
+                </a>
+        </div>
+</div>
