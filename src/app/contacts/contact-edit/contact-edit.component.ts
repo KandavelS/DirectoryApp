@@ -2,15 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { IContact } from '../contact';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContactService } from '../contacts.service';
+import { DateFormatPipe } from '../../shared/date-format.pipe';
+
+import * as moment from 'moment';
 
 @Component({
   selector: 'pbk-contact-edit',
-  templateUrl: './contact-edit.component.html',
-  styleUrls: ['./contact-edit.component.css']
+  templateUrl: './contact-edit.component.html'
 })
 export class ContactEditComponent implements OnInit {
 
-  public pageTitle: String = 'Contact Detail';
+  public pageTitle: String = 'Edit Contact';
   public errorMessage: string;
   public contact: IContact;
 
@@ -37,7 +39,15 @@ export class ContactEditComponent implements OnInit {
    */
   getContact(id: string): void {
     this.contact = this._contactService.getContact(id);
-  //  this.contact.birthday = new Date( this.contact.birthday );
+  }
+
+  /**
+   *
+   * @param updatedContact - IContact
+   * Invoke the service to update the contact
+   */
+  saveContact(updatedContact: IContact): void {
+    this._contactService.editContact(this.contact.id, updatedContact);
   }
 
 }
