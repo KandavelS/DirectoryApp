@@ -11,11 +11,14 @@ import { FormsModule } from '@angular/forms';
 import { ContactNewComponent } from './contact-new/contact-new.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactEditComponent } from './contact-edit/contact-edit.component';
+import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
+
 
 @NgModule({
   imports: [
    CommonModule,
    FormsModule,
+   DlDateTimePickerDateModule,
     RouterModule.forChild([
       { path: 'contacts', component: ContactListComponent },
       { path: 'contacts/:id',
