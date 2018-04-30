@@ -41,7 +41,7 @@
                       </td>
                       <td>{{ contact.phone }}</td>
                       <td>{{ contact.email }}</td>
-                      <td>{{ contact.birthday }}</td>
+                      <td>{{ contact.birthday | date:'MM/dd/yyyy' }} </td>
                       <td> <button [routerLink]="['/edit', contact.id]" type="submit" class="btn btn-primary">Edit</button></td>
                   </tr>
               </tbody>
