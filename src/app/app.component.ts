@@ -3,8 +3,7 @@ import { ContactService } from './contacts/contacts.service';
 
 @Component({
   selector: 'pbk-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
   pageTitle: String = 'ACME Directory';
